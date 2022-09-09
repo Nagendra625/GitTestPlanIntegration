@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'create-new-angualr';
+  
+  title1= "test project";
 }
