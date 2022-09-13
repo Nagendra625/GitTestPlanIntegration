@@ -34,7 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-  
+          
+      # Run this to call Azure Pipeline
       - name: Azure Pipelines Action
         uses: Azure/pipelines@v1
         with:
