@@ -49,6 +49,11 @@ jobs:
         uses: Nagendra625/JavascriptAction@v1.2
         with:
           who-to-greet: 'Mona the Octocat'
+          organizationId: 'I29603'
+          projectId: 'I29603'
+          testplanid: 1
+          testsuiteid: 2
+          PAT_TOKEN: 'tcfbtg6mlccz5swfhjyjvja3nd3gxyd64nvx7j3eu3wnxujho2qq'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
