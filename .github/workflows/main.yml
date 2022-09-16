@@ -46,7 +46,7 @@ jobs:
       # Custom Action Trigger from current solution
       - name: Hello world action step
         id: hello
-        uses: Nagendra625/JavascriptAction@v1.5
+        uses: Nagendra625/JavascriptAction@v1.6
         with:
           who-to-greet: 'Mona the Octocat'
           organizationId: 'I29603'
