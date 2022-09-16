@@ -46,7 +46,7 @@ jobs:
       # Custom Action Trigger from current solution
       - name: AZTCU
         id: hello
-        uses: Nagendra625/JavascriptAction@v1.6
+        uses: Nagendra625/JavascriptAction@v1.8
         with:
           organizationId: 'I29603'
           projectId: 'I29603'
