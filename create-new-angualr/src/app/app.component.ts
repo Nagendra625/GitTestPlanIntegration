@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'create-new-angualr2 for Github ....';
+  title = 'testting the changes made to create-new-angualr2 for Github ....';
 }
