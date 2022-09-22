@@ -42,7 +42,8 @@ jobs:
           azure-devops-project-url: https://dev.azure.com/I29603/I29603
           azure-pipeline-name: 'Run Git App'
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
-      
+          azure-pipeline-variables:  '{"SWBuildNumber ": "13", "APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
+          
       # Custom Action Trigger from current solution
       - name: AZTCU
         id: hello
@@ -52,7 +53,7 @@ jobs:
           projectId: 'I29603'
           testplanid: 1
           testsuiteid: 2
-          PAT_TOKEN: 'tcfbtg6mlccz5swfhjyjvja3nd3gxyd64nvx7j3eu3wnxujho2qq'
+          PAT_TOKEN: 'u4ryjpryohyvgbm22ch656porbi77jcvjkritfyonddab4cwdn3a'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
