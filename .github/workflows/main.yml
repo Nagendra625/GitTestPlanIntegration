@@ -42,7 +42,7 @@ jobs:
           azure-devops-project-url: https://dev.azure.com/I29603/I29603
           azure-pipeline-name: 'Run Git App'
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
-          azure-pipeline-variables:  '{"SWBuildNumber ": "13", "APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
+          azure-pipeline-variables:  '{"APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
           
       # Custom Action Trigger from current solution
       - name: AZTCU
