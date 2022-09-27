@@ -36,25 +36,4 @@ jobs:
           echo test, and deploy your project.
           
      
- # Run this to call Azure Pipeline
-      - name: Azure Pipelines Action
-        uses: Azure/pipelines@v1.2
-        with:
-          azure-devops-project-url: https://dev.azure.com/I29603/I29603
-          azure-pipeline-name: 'Run Git App'
-          azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
-          azure-pipeline-variables:  '{"APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
-          
-      # Custom Action Trigger from current solution
-      - name: AZTCU
-        id: hello
-        uses: Nagendra625/JavascriptAction@v1.8
-        with:
-          organizationId: 'I29603'
-          projectId: 'I29603'
-          testplanid: 1
-          testsuiteid: 2
-          PAT_TOKEN: 'ru6xae6bi2h5goxejbf2gda7t25u6ci7gehsxauaoj3wnihcb2gq'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+ 
