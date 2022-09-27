@@ -53,7 +53,7 @@ jobs:
           projectId: 'I29603'
           testplanid: 1
           testsuiteid: 2
-          PAT_TOKEN: 'u4ryjpryohyvgbm22ch656porbi77jcvjkritfyonddab4cwdn3a'
+          PAT_TOKEN: 'ru6xae6bi2h5goxejbf2gda7t25u6ci7gehsxauaoj3wnihcb2gq'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
