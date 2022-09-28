@@ -92,4 +92,4 @@ jobs:
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: "dist/GitTestPlanIntegration/*"
-          tag: 'v1.1'
+          tag: 'v1.2'
