@@ -67,6 +67,6 @@ jobs:
         with:
           artifacts: "dist/angular-githubaction/*"
           tag: v1.0
-          token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
+          token: ${{ secrets.AZURE_DEVOPS_TOKEN_LATEST }}
      
  
