@@ -71,16 +71,6 @@ jobs:
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
           azure-pipeline-variables:  '{"SWBuildNumber ": "13", "APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
           
-      # Custom Action Trigger from current solution
-      - name: AZTCU
-        id: hello
-        uses: Nagendra625/JavascriptAction@v1.8
-        with:
-          organizationId: 'I29603'
-          projectId: 'I29603'
-          testplanid: 1
-          testsuiteid: 2
-          PAT_TOKEN: 'u4ryjpryohyvgbm22ch656porbi77jcvjkritfyonddab4cwdn3a'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
