@@ -91,5 +91,5 @@ jobs:
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1.10.0
         with:
-          artifacts: "dist/GitTestPlanIntegration/*"
-          tag: '*'
+          artifacts: "GitTestPlanIntegration/dist/create-new-angualr/*"
+          tag: 'v1.3'
