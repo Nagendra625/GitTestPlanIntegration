@@ -64,7 +64,7 @@ jobs:
           npm run build:prod
       # Run this to call Azure Pipeline
       - name: Azure Pipelines Action
-        uses: Azure/pipelines@v1
+        uses: Azure/pipelines@v1.2
         with:
           azure-devops-project-url: https://dev.azure.com/I29603/I29603
           azure-pipeline-name: 'Run Git App'
