@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     tags:
-        - v*
+      - '*'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
@@ -66,6 +66,7 @@ jobs:
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: "dist/angular-githubaction/*"
+          tag: v1.0
           token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
      
  
