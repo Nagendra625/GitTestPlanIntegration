@@ -71,7 +71,26 @@ jobs:
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
           azure-pipeline-variables:  '{"SWBuildNumber": "13", "APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
           
+          
+      # Custom Action Trigger from current solution
+      - name: AZTCU
+        id: actionTrigger
+        uses: Nagendra625/JavascriptAction@v1.8
+        with:
+          organizationId: 'I29603'
+          projectId: 'I29603'
+          testplanid: 1
+          testsuiteid: 2
+          PAT_TOKEN: '54f72awzqmzbfteszosn7m7wkjkrj5rnr7g6t3qlmxdubit2o2qa'
+          
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
-      
+        run: echo "The time was ${{ steps.actionTrigger.outputs.time }}"
+
+      # pushing build to releases
+      - name: Push Build to Releases
+        uses: ncipollo/release-action@v1.10.0
+        with:
+          artifacts: "dist/angular-githubaction/*"
+          tag: 'v1.0'
+          token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
