@@ -77,10 +77,19 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.actionTrigger.outputs.time }}"
+        
+      # Create Release Artifacts
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: release artifact
+          path: |
+            dist
+            !dist/**/*.md
 
       # pushing build to releases
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: "dist/GitTestPlanIntegration/create-new-angualr/*"
-          tag: 'v1.18.4'
+          tag: 'v1.18.5'
