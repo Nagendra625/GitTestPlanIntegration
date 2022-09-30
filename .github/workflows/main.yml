@@ -62,15 +62,6 @@ jobs:
         run: |
           npm i
           npm run build:prod
-      # Run this to call Azure Pipeline
-      - name: Azure Pipelines Action
-        uses: Azure/pipelines@v1.2
-        with:
-          azure-devops-project-url: https://dev.azure.com/I29603/I29603
-          azure-pipeline-name: 'Run Git App'
-          azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
-          azure-pipeline-variables:  '{"SWBuildNumber": "13", "APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
-          
           
       # Custom Action Trigger from current solution
       - name: AZTCU
@@ -92,4 +83,4 @@ jobs:
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: "dist/GitTestPlanIntegration/create-new-angualr/*"
-          tag: 'v1.6'
+          tag: 'v1.7'
