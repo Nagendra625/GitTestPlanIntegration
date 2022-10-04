@@ -87,7 +87,7 @@ jobs:
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: "dist/*"
-          tag: 'v1.18.13'
+          tag: 'v1.18.14'
         
      # Create Release Artifacts
       - name: Archive production artifacts
@@ -97,12 +97,4 @@ jobs:
           path: | 
             create-new-angualr/dist/*
 
-       # Run this to call Azure Pipeline
-      - name: Azure Pipelines Action
-        uses: Azure/pipelines@v1.2
-        with:
-          azure-devops-project-url: https://dev.azure.com/I29603/I29603
-          azure-pipeline-name: 'Run Git App'
-          azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
-          azure-pipeline-variables:  '{"SWBuildNumber": "13", "APPSERVER": "https://dev.navigator.cyber.verisk.com"}' # optional stringified json
-        
+     
