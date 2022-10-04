@@ -48,6 +48,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo get the github version
+          git --version
     
       - name: Cache node modules
         uses: actions/cache@v1
@@ -87,13 +89,13 @@ jobs:
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: "dist/*"
-          tag: 'v1.18.17'
+          tag: 'v1.18.18'
         
      # Create Release Artifacts
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: release artifact
+          name: gittestplan-artifact
           path: | 
             create-new-angualr/dist/*
 
