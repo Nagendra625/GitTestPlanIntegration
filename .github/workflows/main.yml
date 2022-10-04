@@ -87,7 +87,7 @@ jobs:
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: "dist/*"
-          tag: 'v1.18.12'
+          tag: 'v1.18.13'
         
      # Create Release Artifacts
       - name: Archive production artifacts
