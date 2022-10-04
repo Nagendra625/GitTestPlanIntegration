@@ -72,7 +72,7 @@ jobs:
           projectId: 'I29603'
           testplanid: 1
           testsuiteid: 2
-          PAT_TOKEN: '54f72awzqmzbfteszosn7m7wkjkrj5rnr7g6t3qlmxdubit2o2qa'
+          PAT_TOKEN: ${{ secrets.AZURE_DEVOPS_TOKEN }}
           
        
       # Use the output from the `hello` step
