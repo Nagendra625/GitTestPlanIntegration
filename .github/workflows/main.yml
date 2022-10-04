@@ -92,8 +92,8 @@ jobs:
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1.10.0
         with:
-          artifacts: "dist/GitTestPlanIntegration/create-new-angualr/*"
-          tag: 'v1.18.9'
+          artifacts: "dist/*"
+          tag: 'v1.18.10'
           
        # Run this to call Azure Pipeline
       - name: Azure Pipelines Action
