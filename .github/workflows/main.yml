@@ -30,7 +30,9 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-
+        
+    permissions:
+        contents: write
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -78,13 +80,14 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.actionTrigger.outputs.time }}"
-        
+
+      
       # pushing build to releases
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1.10.0
         with:
-          artifacts: "release.tar.gz,foo/*.txt"
-          tag: 'v1.18.11'
+          artifacts: "dist/*"
+         # tag: 'v1.18.11'
         
      # Create Release Artifacts
       - name: Archive production artifacts
@@ -92,7 +95,7 @@ jobs:
         with:
           name: release artifact
           path: | 
-            create-new-angualr
+            create-new-angualr/dist/*
 
        # Run this to call Azure Pipeline
       - name: Azure Pipelines Action
